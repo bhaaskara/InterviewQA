@@ -23,3 +23,5 @@ K8s cluster will have two main components
 
 ## whick k8s component creates the POD
 kubelet
+
+## how to identify the backend pods of a service
