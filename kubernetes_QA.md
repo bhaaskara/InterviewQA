@@ -7,7 +7,7 @@ K8s is a container orchestration tool.
 
 ## what is K8s architecture
 
-## Whats are k8s cluster components
+## What are k8s cluster components
 K8s cluster will have two main components
 1. control plane (Master node)
    - **Kube-API server**: Users, the different parts of your cluster, and external components all communicate with one another through the API server.
@@ -25,3 +25,5 @@ K8s cluster will have two main components
 kubelet
 
 ## how to identify the backend pods of a service
+## How to dry run the k8s commands
+## how to verify the syntax of the k8s deployment yaml file
