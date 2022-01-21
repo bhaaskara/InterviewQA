@@ -40,3 +40,18 @@ Agile software development method emphasis on iterative, incremental, and evolut
 # What is devops
 DevOps is a methodology that promotes collaboration between Development and Operations Team. This allows deploying code to production faster and in an automated way. It helps to enables rapid deployment of products.
 
+# What are the key aspects or principle behind DevOps
+- Infrastructure as a Code
+- Continuous Integration
+- Continuous Deployment
+- Automation
+- Continuous Monitoring
+- Security
+
+# list some of popular devops tools
+- Git
+- jenkins
+- ansible
+- puppet
+- nagios
+- docker
