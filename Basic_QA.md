@@ -23,7 +23,7 @@ Ref: https://www.guru99.com/software-development-life-cycle-tutorial.html
 
 ## Waterfall model
 ![[waterfall.jpg]]
-#### Disadvantages of waterfallmodel
+#### Disadvantages of waterfall model
 - It is difficult to estimate time and cost for each phase of the development process. 
 - Once an application is in the testing stage, it is very difficult to go back and change something that was not well-thought out in the concept stage. 
 - Not a good model for complex and object- oriented projects. 
@@ -55,3 +55,10 @@ DevOps is a methodology that promotes collaboration between Development and Oper
 - puppet
 - nagios
 - docker
+
+# Can we consider DevOps as Agile methodology?
+Yes, we can!! The only difference between agile methodology and DevOps is that, agile methodology is implemented only for development section and DevOps implements agility on both development as well as operations section.
+
+# What is Scrum? 
+Scrum is basically used to divide your complex software and product development task into smaller chunks, using iterations and incremental practices. Each iteration is of two weeks.
+
