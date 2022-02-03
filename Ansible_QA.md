@@ -26,3 +26,6 @@ Ansible by default gathers “facts” about the machines, and these facts can b
 `Ansible -m setup hostname` 
 This will print out a dictionary of all the facts that are available for that particular host.
 
+# How to execute some errand (or) play on localhost just while executing playbooks on various has on an ansible? 
+In ansible, there is a module called delegate_to, in this module area give the specific host (or) has where your errands (or) assignment should be run. undertakings: name: ” Elasticsearch Hitting” uri: url=’_search?q=status:new’ headers='{“Content-type”:”application/json”}’ method=GET return_content=yes register: yield delegate_to: 127.0.0.1
+
