@@ -29,3 +29,6 @@ This will print out a dictionary of all the facts that are available for that pa
 # How to execute some errand (or) play on localhost just while executing playbooks on various has on an ansible? 
 In ansible, there is a module called delegate_to, in this module area give the specific host (or) has where your errands (or) assignment should be run. undertakings: name: ” Elasticsearch Hitting” uri: url=’_search?q=status:new’ headers='{“Content-type”:”application/json”}’ method=GET return_content=yes register: yield delegate_to: 127.0.0.1
 
+# What is callback plugins in ansible
+Callback plugins **enable adding new behaviors to Ansible when responding to events**. By default, callback plugins control most of the output you see when running the command line programs, but can also be used to add additional output, integrate with other tools and marshal the events to a storage backend.
+

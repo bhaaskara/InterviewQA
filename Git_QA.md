@@ -89,3 +89,28 @@ Follow the steps
 # How you will do tagging in git? 
 We have following command to create tags in git Git tag v0.1
 
+# What is git checkout
+Switch branch or restore working files
+
+# what is git push
+Sends the changes to the remote repository
+# what is git commit
+Commits the changes to the HEAD (staging area)
+# what is git add
+adds the file changes to the staging area
+# what is git branch
+Creates a branch
+# what is git fetch
+Fetch the latest history from the remote server and updates the local repo
+# what is git merge
+Joins two or more branches together
+# what is git pull
+Fetch from and integrate with another repository or a local branch (git fetch + git merge)
+# What is git rebase? 
+Process of moving or combining a sequence of commits to a new base commit
+# What is git revert? 
+To revert a commit that has already been published and made public
+# What is git clone? 
+clones the git repository and creates a working copy in the local machine
+# What is the command in git to modify the commit message? 
+Use the command “amend” to modify the commit message.

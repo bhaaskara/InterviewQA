@@ -27,3 +27,10 @@ kubelet
 ## how to identify the backend pods of a service
 ## How to dry run the k8s commands
 ## how to verify the syntax of the k8s deployment yaml file
+
+# Deployment Use Cases in Kubernetes
+**Use Case 1**- Create a Deployment: On the creation of deployment, Pods are created automatically by ReplicaSet in the background. 
+**Use Case 2**- Update Deployment: Creation of new ReplicaSet happens and now the deployment is updated. Deployment revisions are updated through these new ReplicaSet. 
+**Use Case 3**- Rollback Deployment: If the current deployment state is not steady, rollback of deployment happens. But we can see the container images are updated. 
+**Use Case 4**- Scale a Deployment: Based on the requirement, scaling up or scaling down can be performed on each and every deployment. 
+**Use Case 5**- Pause the Deployment: To apply various fixes, deployment can be paused and later resumed

@@ -1,6 +1,9 @@
 # What is pipeline ?
 Jenkins Pipeline (or simply “Pipeline”) is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins.
 
+# What are the different types of pipelines
+Scripted pipeline 
+Declarative pipeline
 # Jenkins pipeline: agent vs node ?
 The simple answer is, **Agent** is for **declarative** pipelines and **node** is for **scripted** pipelines.
 
@@ -41,3 +44,5 @@ We can install Jenkins in 3 Ways
 • By running as a service Java –jar Jenkins.war 
 • By deploying Jenkins.war to the webapps folder in tomcat.
 
+# What are labels and how they are used
+When creating a new slave node, Jenkins allows us to tag a slave node with a label. Labels **represent a way of naming one or more slaves**. We leverage this labeling system to tie the execution of a job directly to one or more slave nodes.
