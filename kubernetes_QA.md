@@ -88,3 +88,72 @@ This architecture depends upon the application and many other factors. Following
 -   Streaming sidecar container.
 -   Sidecar container with the logging agent.
 -   Export logs directly from the application.
+
+# Name space use cases ?
+...
+
+# What is an Operator?
+"Operators are software extensions to K8s which make use of custom resources to manage applications and their components. Operators follow Kubernetes principles, notably the control loop."
+
+# Why do we need Operators?
+The process of managing applications in Kubernetes isn't as straightforward as managing stateless applications, where reaching the desired status and upgrades are both handled the same way for every replica. In stateful applications, upgrading each replica might require different handling due to the stateful nature of the app, each replica might be in a different status. As a result, we often need a human operator to manage stateful applications. Kubernetes Operator is supposed to assist with this.
+
+This will also help with automating a standard process on multiple Kubernetes clusters
+
+# What is Ingress Default Backend?
+It specifies what to do with an incoming request to the Kubernetes cluster that isn't mapped to any backend i.e what to do when no rules being defined for the incoming HTTP request If the default backend service is not defined, it's recommended to define it so that users still see some kind of message instead of an unclear error
+
+# What is Kubernetes Load Balancing?
+Load Balancing is one of the most common and standard ways of exposing the services. There are two types of load balancing in K8s and they are:
+
+**Internal load balancer –** This type of balancer automatically balances loads and allocates the pods with the required incoming load.
+
+**External Load Balancer –** This type of balancer directs the traffic from the external loads to backend pods
+
+# How to troubleshoot if the POD is not getting scheduled?
+In K8’s scheduler is responsible to spawn pods into nodes. There are many factors that can lead to unstartable POD. 
+The most common one is running out of resources, use the commands like `kubectl describe <POD> -n <Namespace>` to see the reason why POD is not started. 
+Also, keep an eye on `kubectl` to get events to see all events coming from the cluster.
+
+# How to run a POD on a particular node?
+   Various methods are available to achieve it.  
+- nodeName specify the name of a node in POD spec configuration, it will try to run the POD on a specific node.  
+- nodeSelector Assign a specific label to the node which has special resources and use the same label in POD spec so that POD will run only on that node.
+- nodeaffinities required DuringSchedulingIgnoredDuringExecution, preferredDuringSchedulingIgnoredDuringExecution are hard and soft requirements for running the POD on specific nodes. This will be replacing nodeSelector in the future. It depends on the node labels.
+
+# What are the different ways to provide external network connectivity to K8?
+By default, POD should be able to reach the external network but vice-versa we need to make some changes. Following options are available to connect with POD from the outer world.
+
+- Nodeport (it will expose one port on each node to communicate with it)
+- Load balancers (L4 layer of TCP/IP protocol)
+- Ingress (L7 layer of TCP/IP Protocol)
+
+Another method is to use Kube-proxy which can expose a service with only cluster IP on the local system port.
+
+# What are the security measures you can take while using k8s ?
+- Apply security updates to environment regularly
+- implement continuous security vulnerability scanning
+- Restrict access to etcd
+- Log everything on the prod environment.
+- implement network segmentation
+- define strict policies/rules for resources
+- enable auditing
+- provide limited access to k8s nodes
+- define resource quotas
+- use images from authorized repositories only
+
+# Replicaset vs replicatin controller ?
+
+# what is head less service
+
+# What is heapster ?
+A Heapster is a performance monitoring and metrics collection system for data collected by the Kublet. This aggregator is natively supported and runs like any other pod within a Kubernetes cluster, which allows it to discover and query usage data from all nodes within the cluster.
+
+# what is namespace
+
+# Default namespaces in k8s ?
+- kube-system
+- kube-public
+
+# How can you get a static IP for a Kubernetes load balancer? 
+A static IP for the Kubernetes load balancer can be achieved by changing DNS records since the Kubernetes Master can assign a new static IP address.
