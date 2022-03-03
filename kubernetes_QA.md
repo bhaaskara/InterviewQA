@@ -157,3 +157,65 @@ A Heapster is a performance monitoring and metrics collection system for data co
 
 # How can you get a static IP for a Kubernetes load balancer? 
 A static IP for the Kubernetes load balancer can be achieved by changing DNS records since the Kubernetes Master can assign a new static IP address.
+
+
+# Prometheus and Grafana
+## What is promQL?
+this is the query language used to query the prometheus.
+used to create own queries and dash boards.
+
+# what is taint and tolerance ?
+**_Taints_** are applied to nodes, and allow a node to repel a set of pods.
+
+**_Tolerations_** are applied to pods, and allow (but do not require) the pods to schedule onto nodes with matching taints.
+
+Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes.One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints.
+
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  tolerations:
+  - key: "example-key"
+    operator: "Exists"
+    effect: "NoSchedule"
+```
+
+A toleration "matches" a taint if the keys are the same and the effects are the same, and:
+-   the `operator` is `Exists` (in which case no `value` should be specified), or
+-   the `operator` is `Equal` and the `value`s are equal.
+
+**Note:**
+
+There are two special cases:
+An empty `key` with operator `Exists` matches all keys, values and effects which means this will tolerate everything.
+
+An empty `effect` matches all effects with key `key1`.
+
+# Node affinity and Pod affinity
+# Node anti-affinity 
+# Pod and deployment logs
+`kubectl logs <pod_name>`
+
+Describe a deployment and check the events
+
+# kubectl events
+# whats the deployment strategy ur using ?
+blue-green
+canary
+
+# init containers ?
+
+# what is stateful set ?
+# what is ingress ?
+
+# headless service ?
+
