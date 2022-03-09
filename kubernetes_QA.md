@@ -2,10 +2,11 @@
 Container orchestration is the automation of operational effort required to run containerized workloads and services. 
 This includes provisioning, deployment, scaling (up and down), networking, load balancing and more.
 
+![[Pasted image 20220305223242.png]]
 ## What is k8s
 K8s is a container orchestration tool.
 
-## what is K8s architecture
+## What is K8s architecture
 https://github.com/bhaaskara/Kubernetes/blob/main/K8s_concepts.md#k8s-architecture
 
 ## What are k8s cluster components
@@ -21,10 +22,48 @@ K8s cluster will have two main components
    - **kube-proxy:** kube-proxy is a network proxy that runs on each node in your cluster
 
 > Container runtime (like docker) is pre req for k8s.
+# How to schedule app pods on master node ?
 
-## whick k8s component creates the POD
+# Pods
+## Which k8s component creates the POD
 kubelet
 
+## Init containers
+specialized containers that run before app containers in a [Pod](https://kubernetes.io/docs/concepts/workloads/pods/). Init containers can contain utilities or setup scripts not present in an app image.
+
+## Live ness probes and ready ness probes
+
+## Pending state
+- when there are not enough resources
+- when using host port
+   - if you do require host port then you can only schedule as many pods as there are nodes.
+
+## Reasons for crash loop back off error?
+- application inside you container keeps crashing
+- some type of parameters of POD/Container have been configured incorrectly
+- an error has been made while deploying k8s.
+
+## How to make sure a pod runs on a specific node ?
+mentioning or using node selector label in POD.
+using POD affinity
+
+## how to check what are the activities performed by the container while creating the pod ?
+by checking the logs
+
+## how to get IP of a POD
+`kubectl get pods -o wide`
+
+## Job should be terminated after 40 secs
+ActiveDeadLineSeconds: 40
+
+## How do we control the resource usage of POD?
+With the use of limit and request resource usage of a POD can be controlled.
+
+# Resource limits
+## can we set resource limits on each container ?
+# Service
+## which network plugin your using
+calico
 ## how to identify the backend pods of a service
 ## How to dry run the k8s commands
 ## how to verify the syntax of the k8s deployment yaml file
@@ -42,8 +81,7 @@ Cordon the node - moves the node to maintenance mode
 Drain the node -  discard the pod from the node
 `kubectl drain –ignore-daemon set`
 
-# How do we control the resource usage of POD?
-With the use of limit and request resource usage of a POD can be controlled.
+
 
 # What is PDB (Pod Disruption Budget)?
 A Kubernetes administrator can create a deployment of a kind: PodDisruptionBudget for high availability of the application, it makes sure that the minimum number is running pods are respected as mentioned by the attribute minAvailable spec file. This is useful while performing a drain where the drain will halt until the PDB is respected to ensure the High Availability(HA) of the application. The following spec file also shows minAvailable as 2 which implies the minimum number of an available pod (even after the election).
@@ -59,10 +97,8 @@ spec:
  minAvailable: 2
  selector:
    matchLabels:
-     app: zookeepe
+     app: zookeeper
 ```
-
-# What’s the init container and when it can be used?
 
 # What is the role of Load Balance in K8s?
 
@@ -142,7 +178,7 @@ Another method is to use Kube-proxy which can expose a service with only cluster
 - define resource quotas
 - use images from authorized repositories only
 
-# Replicaset vs replicatin controller ?
+# Replicaset vs replication controller ?
 
 # what is head less service
 
@@ -212,10 +248,35 @@ Describe a deployment and check the events
 blue-green
 canary
 
-# init containers ?
-
 # what is stateful set ?
 # what is ingress ?
 
 # headless service ?
 
+# Configmap vs Secret
+secrets are encoded but not encrypted.
+
+# how do you make sure data base start first and then application ?
+we can define the logic for app pod/container to wait for the DB to come up and successful connection through readyness probe.
+
+# liveness probe and ready ness probe
+
+# types of storage classes ?
+may be like SSD/HDD ?
+
+# PV and PVC
+
+# updating a password in secret will affect in POD/Deployment ?
+# How to dynamically update the password in secret ?
+# how to roll back deployment ?
+https://www.youtube.com/watch?v=kFv6c00iEjY
+
+# whats the reason for pod eviction ?
+Due to lack of resources on the node.
+`kubelet` can reclaim the starved resource by failing one or more pods.
+if evicted pod managed by a deployment, the deployment creates another pod to be scheduled by k8s.
+
+# how your monitoring your cluser
+using prometheus and grafana
+> for application monitoring you need prometheus exporters
+> for example prometheus exporter for kafka, prometheus exporter for linux
