@@ -276,7 +276,43 @@ Due to lack of resources on the node.
 `kubelet` can reclaim the starved resource by failing one or more pods.
 if evicted pod managed by a deployment, the deployment creates another pod to be scheduled by k8s.
 
-# how your monitoring your cluser
+# how your monitoring your cluster
 using prometheus and grafana
 > for application monitoring you need prometheus exporters
 > for example prometheus exporter for kafka, prometheus exporter for linux
+
+# Advanced
+## How do you automate k8s deployment ?
+
+![[Pasted image 20220318003732.png]]
+
+## How do you secure your k8s app ?
+K8s security
+    - Application security
+        - Pods, name spaces and nodes are secured with RBAC and IRSA.
+    - Devsecops - Devops+Security = security of the container devops lifecycle
+        - Authorization (using IAM roles)
+        - scan repository
+        - scan running container
+    - Security compliance
+        - FedRAMP,HIPAA,Soc etc..
+
+## How do you cost/performance optimize your k8s app?
+K8s cost
+    - Control plane cost (fixed, not much room for improvement)
+    - Worker node number and type
+        - Pod resource specifications
+        - Unused CPU/memory allocation
+        - Detect CPU/Memory waste - utilize metrics server
+           Analyzing metrics server data is not easy so use tools that helps in analyze the data.
+           - Cloudwatch container insights - AWS
+           - kubecost
+           - CloudHealth
+           - Kubernetes resource report
+## Tell me about a challenge you faced in k8s ?
+Challenge
+    - K8s version upgrade 
+
+
+# How to encrypt the traffic between pods using mtls protocol ?
+using service mesh

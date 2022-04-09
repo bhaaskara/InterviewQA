@@ -1,3 +1,9 @@
+
+```
+what is workspace in jenkins ?
+
+```
+
 # What is pipeline ?
 Jenkins Pipeline (or simply “Pipeline”) is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins.
 
