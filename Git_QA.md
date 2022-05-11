@@ -1,13 +1,21 @@
-# what is a version control system
+# What is a version control system
 Version control, also known as source control, is the practice of tracking and managing changes to software code. 
 Version control systems are software tools that help software teams manage changes to source code over time.
 
-## Types of Version control systems
+# Advantages of version control system
+- Changes can be tracked easily
+- Provides backup
+# Types of Version control systems
 1. Central Version Control System, Ex: svn
 2. Distributed/Decentralized Version Control System, Ex: Git, Bitbucket
 
+# What is a Distributed version control system
+...
+
 # What is Git ?
 Git is a source code management (SCM) tool which handles small as well as large projects with efficiency. It is basically used to store our repositories in remote server such as GitHub.
+
+Git is a distributed version control system. 
 
 ## Git vs SVN
 GIT | SVN
@@ -16,10 +24,10 @@ Git is a Decentralized Version Control Tool | SVN is a Centralized Version Contr
 Git contains the local repo as well as the full history of the whole project on all the developers machines, so if there is a server outage , you can easily do recovery from your team mates local git | SVN relies only on the central server to store
 Commits can be done offline too | Commits can be done only online
 
-## what language is used in Git
+# What language is used in Git
 Git is written in C language, and since its written in C language its very fast and reduces the overhead of runtimes.
 
-## what is subGit ?
+# What is subGit ?
 SubGit is a tool for migrating SVN to Git. It creates a writable Git mirror of a local or remote Subversion repository and uses both Subversion and Git if you like.
 
 # Explain the difference between git pull and git fetch?
@@ -77,7 +85,8 @@ There are some steps to follow.
 • Grooming the issue tracker
 
 # How can I modify the commit message in git? 
-I have to use following command and enter the required message. Git commit –amend
+I have to use following command and enter the required message.  
+`Git commit –amend`
 
 # How you handle the merge conflicts in git?
 Follow the steps 
@@ -92,10 +101,17 @@ We have following command to create tags in git Git tag v0.1
 # What is git checkout
 Switch branch or restore working files
 
-# what is git push
+# What is git push
 Sends the changes to the remote repository
-# what is git commit
+
+# Commit
+## What is git commit
 Commits the changes to the HEAD (staging area)
+**commit message:** is the description of the changes performed in the code.
+
+## How do you fix a broken commit
+`git commit --amend`
+
 # what is git add
 adds the file changes to the staging area
 # what is git branch
@@ -114,3 +130,9 @@ To revert a commit that has already been published and made public
 clones the git repository and creates a working copy in the local machine
 # What is the command in git to modify the commit message? 
 Use the command “amend” to modify the commit message.
+
+# How to get specific version or previous version of a file ?
+# Git init vs clone vs fork
+`git init` : Initializes a new empty local repository
+`git clone` : Creates a copy of the original repository from Github on local machine.
+`git fork` : Creates a copy of the original repository on your github account.

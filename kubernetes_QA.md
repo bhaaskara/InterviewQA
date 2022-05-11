@@ -22,6 +22,16 @@ K8s cluster will have two main components
    - **kube-proxy:** kube-proxy is a network proxy that runs on each node in your cluster
 
 > Container runtime (like docker) is pre req for k8s.
+
+# RBAC
+## What is kubeconfig file ?
+The `kubectl` command-line tool uses kubeconfig files to connect with the cluster.
+
+## What is context
+Context binds users with the cluster and name space.
+By setting the context we can define cluster, namespace and user to connect.
+By default, the `kubectl` command-line tool uses parameters from the _current context_ to communicate with the cluster.
+
 # How to schedule app pods on master node ?
 
 # Pods
