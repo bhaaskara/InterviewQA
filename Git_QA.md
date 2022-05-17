@@ -10,12 +10,16 @@ Version control systems are software tools that help software teams manage chang
 2. Distributed/Decentralized Version Control System, Ex: Git, Bitbucket
 
 # What is a Distributed version control system
-...
+Distributed version control system doesn't reply on a central server to store the source files and all its versions.
+
+![](Pasted%20image%2020220514205609.png)
+
 
 # What is Git ?
-Git is a source code management (SCM) tool which handles small as well as large projects with efficiency. It is basically used to store our repositories in remote server such as GitHub.
-
+Git is a distributed source code management (SCM) tool.
 Git is a distributed version control system. 
+
+It is basically used to store our repositories in remote server such as GitHub.
 
 ## Git vs SVN
 GIT | SVN
@@ -136,3 +140,36 @@ Use the command “amend” to modify the commit message.
 `git init` : Initializes a new empty local repository
 `git clone` : Creates a copy of the original repository from Github on local machine.
 `git fork` : Creates a copy of the original repository on your github account.
+
+# Merge vs pull ?
+ `git pull` is the same as `git fetch` + `git merge`
+
+## git ammend
+
+# How do you fix a broken commit
+`git commit --amend`
+
+# How to recover a deleted branch ?
+# How to drop the changes in staging area ?
+# How to list files changed in a commit ?
+`git diff-tree -r <commitID>`
+`git diff-tree --no-commit-id --name-only -r <hash>`
+
+# How to check a branch has been merged ?
+`git branch --merged`
+`git branch --no-merged`
+
+# How to remove a file from git tracking
+(Remove only from git tracking not on disk/file system)
+`git reset <file name>`
+or add filename to `.gitignore`
+
+# Git revert and reset
+
+![](Pasted%20image%2020220514213306.png)
+
+![](Pasted%20image%2020220514213325.png)
+
+![](Pasted%20image%2020220514213612.png)
+![](Pasted%20image%2020220514213646.png)
+![](Pasted%20image%2020220514213723.png)
