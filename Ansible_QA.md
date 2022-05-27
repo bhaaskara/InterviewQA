@@ -33,3 +33,4 @@ In ansible, there is a module called delegate_to, in this module area give the s
 Callback plugins **enable adding new behaviors to Ansible when responding to events**. By default, callback plugins control most of the output you see when running the command line programs, but can also be used to add additional output, integrate with other tools and marshal the events to a storage backend.
 
 # become: true vs user: root
+# Dynamic inventory?

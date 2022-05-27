@@ -1,3 +1,6 @@
+```
+How to tag in Git and its use cases.
+```
 # What is a version control system
 Version control, also known as source control, is the practice of tracking and managing changes to software code. 
 Version control systems are software tools that help software teams manage changes to source code over time.
@@ -5,27 +8,25 @@ Version control systems are software tools that help software teams manage chang
 # Advantages of version control system
 - Changes can be tracked easily
 - Provides backup
+
 # Types of Version control systems
 1. Central Version Control System, Ex: svn
 2. Distributed/Decentralized Version Control System, Ex: Git, Bitbucket
 
 # What is a Distributed version control system
-Distributed version control system doesn't reply on a central server to store the source files and all its versions.
+Distributed version control system doesn't rely on a central server to store the source files and all its versions.
 
 ![](Pasted%20image%2020220514205609.png)
 
-
 # What is Git ?
-Git is a distributed source code management (SCM) tool.
-Git is a distributed version control system. 
-
-It is basically used to store our repositories in remote server such as GitHub.
+Git is a distributed source code management (SCM) tool or version control system.
+and It uses Github to store repositories remotely.
 
 ## Git vs SVN
 GIT | SVN
 :-- | :--
 Git is a Decentralized Version Control Tool | SVN is a Centralized Version Control Tool 
-Git contains the local repo as well as the full history of the whole project on all the developers machines, so if there is a server outage , you can easily do recovery from your team mates local git | SVN relies only on the central server to store
+Git contains the local repo as well as the full history of the whole project on all the developers machines,<br/> so if there is a server outage , you can easily do recovery from your team mates local git | SVN relies only on the central server to store
 Commits can be done offline too | Commits can be done only online
 
 # What language is used in Git
@@ -40,7 +41,7 @@ Git fetch lists the differences between your local repo and remote repo.
 
 Git pull = git fetch + git merge
 
-# How do we know in Git if a branch has already been merged into master? 
+# How do we know in Git, if a branch has already been merged into master? 
 `git branch –merged` 
 The above command lists the branches that have been merged into the current branch. 
 `git branch –no-merged` 
@@ -51,7 +52,7 @@ Before committing a file, it must be formatted and reviewed in an intermediate a
 `git add <file_name>`
 
 # What is Git Stash? 
-Let’s say you’ve been working on part of your project, things are in a messy state and you want to switch branches for some time to work on something else. The problem is, you don’t want to do a commit of your half-done work just, so you can get back to this point later. The answer to this issue is Git stash. Git Stashing takes your working directory that is, your modified tracked files and staged changes and saves it on a stack of unfinished changes that you can reapply at any time.
+`git stash` temporarily shelves (or _stashes_) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on. Stashing is handy if you need to quickly switch context and work on something else, but you're mid-way through a code change and aren't quite ready to commit.
 
 # What is Git stash drop? 
 Git `stash drop` command is basically used to remove the stashed item. It will basically remove the last added stash item by default, and it can also remove a specific item if you include it as an argument.
@@ -100,7 +101,7 @@ Follow the steps
 4. Merge the current branch with master branch.
 
 # How you will do tagging in git? 
-We have following command to create tags in git Git tag v0.1
+We have following command to create tags in git `Git tag v0.1`
 
 # What is git checkout
 Switch branch or restore working files
@@ -132,6 +133,7 @@ Process of moving or combining a sequence of commits to a new base commit
 To revert a commit that has already been published and made public
 # What is git clone? 
 clones the git repository and creates a working copy in the local machine
+
 # What is the command in git to modify the commit message? 
 Use the command “amend” to modify the commit message.
 

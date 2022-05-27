@@ -1,11 +1,23 @@
+# Basics
 ## What is container orchestration
 Container orchestration is the automation of operational effort required to run containerized workloads and services. 
-This includes provisioning, deployment, scaling (up and down), networking, load balancing and more.
+This includes provisioning, deployment, scaling (up or down), networking, load balancing and more.
 
 ![[Pasted image 20220305223242.png]]
 ## What is k8s
 K8s is a container orchestration tool.
+it's container management responsibilities include container deployment, scaling out and in, and also load balancing.
 
+## K8s VS Docker swarm
+![](Pasted%20image%2020220524141832.png)
+
+## What is minikube?
+Minikube is a tool that runs single node kubernetes cluster inside a VM, thus simplifying it for people to learn.
+
+## What is federated cluster?
+![](Pasted%20image%2020220524151426.png)
+
+# Architecture
 ## What is K8s architecture
 https://github.com/bhaaskara/Kubernetes/blob/main/K8s_concepts.md#k8s-architecture
 
@@ -13,15 +25,22 @@ https://github.com/bhaaskara/Kubernetes/blob/main/K8s_concepts.md#k8s-architectu
 K8s cluster will have two main components
 1. control plane (Master node)
    - **Kube-API server**: Users, the different parts of your cluster, and external components all communicate with one another through the API server.
+      It validates and configures the data for API object such as PODs and services etc.
    - **ETCD**: cluster’s database
-   - **Kube-scheduler**: watches for newly created Pods with no assigned node, and selects a node for them to run on.But it doesn’t do the work of actually launching Pods on Nodes.
+   - **Kube-scheduler**: watches for newly created Pods with no assigned node, and selects a node for them to run on. But it doesn’t do the work of actually launching Pods on Nodes.
    - **Kube-control-manager:** Whenever the current state of the cluster doesn’t match the desired state, kube-controller-manager will attempt to make changes to achieve the desired state.
+     Controller manager is a daemon that embeds controllers.
+     Different controllers are compiled into a single binary like node controller, replication controller, and endpoint controller.
    - **Kube-cloud-control-manager:** kube-cloud-manager manages controllers that interact with underlying cloud providers.
 2. worker Node 
    - **kubelet:** An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod. 
    - **kube-proxy:** kube-proxy is a network proxy that runs on each node in your cluster
 
 > Container runtime (like docker) is pre req for k8s.
+
+## What is kubectl?
+Kubectl is the CLI interface for kubernetes cluster.
+
 
 # RBAC
 ## What is kubeconfig file ?
@@ -70,10 +89,25 @@ ActiveDeadLineSeconds: 40
 With the use of limit and request resource usage of a POD can be controlled.
 
 # Resource limits
-## can we set resource limits on each container ?
+## can we set resource limits on each container?
+
 # Service
 ## which network plugin your using
 calico
+
+## What are the different types of services?
+Node port
+Cluster IP
+Load balancer
+
+![](Pasted%20image%2020220524145205.png)
+
+
+## What is headless service?
+when you don't want load-balancing or a single cluster ip, you use headless service.
+so you can directly reach pods with their DNS names.
+it reduces coupling to kubernetes system
+
 ## how to identify the backend pods of a service
 ## How to dry run the k8s commands
 ## how to verify the syntax of the k8s deployment yaml file
@@ -116,6 +150,8 @@ spec:
 -   RBAC (Role-based access control) to narrow down the permissions.
 -   Use namespaces to establish security boundaries.
 -   Set the admission control policies to avoid running the privileged containers.
+-   Restrict access to ETCD.
+-   use images from authorized repositories only.
 -   Turn on audit logging.
 
 # How to monitor the Kubernetes cluster?
@@ -189,11 +225,13 @@ Another method is to use Kube-proxy which can expose a service with only cluster
 - use images from authorized repositories only
 
 # Replicaset vs replication controller ?
+Both of them uses different types of selectors to replicate the pods.
+Replicaset uses set-based selectors while the replication controller use equity-based selectors.
 
 # what is head less service
 
 # What is heapster ?
-A Heapster is a performance monitoring and metrics collection system for data collected by the Kublet. This aggregator is natively supported and runs like any other pod within a Kubernetes cluster, which allows it to discover and query usage data from all nodes within the cluster.
+A Heapster is a cluster wide aggregator of performance monitoring data collected by the Kubelet. This aggregator is natively supported and runs like any other pod within a Kubernetes cluster, which allows it to discover and query usage data from all nodes within the cluster.
 
 # what is namespace
 

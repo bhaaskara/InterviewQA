@@ -61,4 +61,3 @@ Yes, we can!! The only difference between agile methodology and DevOps is that, 
 
 # What is Scrum? 
 Scrum is basically used to divide your complex software and product development task into smaller chunks, using iterations and incremental practices. Each iteration is of two weeks.
-
