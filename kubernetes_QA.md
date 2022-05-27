@@ -41,7 +41,6 @@ K8s cluster will have two main components
 ## What is kubectl?
 Kubectl is the CLI interface for kubernetes cluster.
 
-
 # RBAC
 ## What is kubeconfig file ?
 The `kubectl` command-line tool uses kubeconfig files to connect with the cluster.
@@ -76,10 +75,10 @@ specialized containers that run before app containers in a [Pod](https://kuberne
 mentioning or using node selector label in POD.
 using POD affinity
 
-## how to check what are the activities performed by the container while creating the pod ?
+## how to check what are the activities performed by the container while creating the pod?
 by checking the logs
 
-## how to get IP of a POD
+## how to get IP of a POD?
 `kubectl get pods -o wide`
 
 ## Job should be terminated after 40 secs
@@ -106,26 +105,29 @@ Load balancer
 ## What is headless service?
 when you don't want load-balancing or a single cluster ip, you use headless service.
 so you can directly reach pods with their DNS names.
-it reduces coupling to kubernetes system
+it reduces coupling to Kubernetes system
 
-## how to identify the backend pods of a service
-## How to dry run the k8s commands
-## how to verify the syntax of the k8s deployment yaml file
+## How to identify the backend pods of a service?
+## How to dry run the k8s commands?
+## How to verify the syntax of the k8s deployment yaml file
 
 # Deployment Use Cases in Kubernetes
-**Use Case 1**- Create a Deployment: On the creation of deployment, Pods are created automatically by ReplicaSet in the background. 
-**Use Case 2**- Update Deployment: Creation of new ReplicaSet happens and now the deployment is updated. Deployment revisions are updated through these new ReplicaSet. 
-**Use Case 3**- Rollback Deployment: If the current deployment state is not steady, rollback of deployment happens. But we can see the container images are updated. 
-**Use Case 4**- Scale a Deployment: Based on the requirement, scaling up or scaling down can be performed on each and every deployment. 
-**Use Case 5**- Pause the Deployment: To apply various fixes, deployment can be paused and later resumed
+**Use Case 1**- Create a Deployment  
+On the creation of deployment, Pods are created automatically by ReplicaSet in the background. 
+**Use Case 2**- Update Deployment  
+Creation of new ReplicaSet happens and now the deployment is updated. Deployment revisions are updated through these new ReplicaSet. 
+**Use Case 3**- Rollback Deployment  
+If the current deployment state is not steady, rollback of deployment happens. But we can see the container images are updated. 
+**Use Case 4**- Scale a Deployment  
+Based on the requirement, scaling up or scaling down can be performed on each and every deployment. 
+**Use Case 5**- Pause the Deployment  
+To apply various fixes, deployment can be paused and later resumed
 
 # How to do maintenance activity on k8s node ?
 Cordon the node - moves the node to maintenance mode
 `kubectl cordon`
 Drain the node -  discard the pod from the node
 `kubectl drain –ignore-daemon set`
-
-
 
 # What is PDB (Pod Disruption Budget)?
 A Kubernetes administrator can create a deployment of a kind: PodDisruptionBudget for high availability of the application, it makes sure that the minimum number is running pods are respected as mentioned by the attribute minAvailable spec file. This is useful while performing a drain where the drain will halt until the PDB is respected to ensure the High Availability(HA) of the application. The following spec file also shows minAvailable as 2 which implies the minimum number of an available pod (even after the election).
@@ -175,25 +177,24 @@ This architecture depends upon the application and many other factors. Following
 ...
 
 # What is an Operator?
-"Operators are software extensions to K8s which make use of custom resources to manage applications and their components. Operators follow Kubernetes principles, notably the control loop."
+Operators are software extensions to K8s which make use of custom resources to manage applications and their components. Operators follow Kubernetes principles, notably the control loop.
 
 # Why do we need Operators?
 The process of managing applications in Kubernetes isn't as straightforward as managing stateless applications, where reaching the desired status and upgrades are both handled the same way for every replica. In stateful applications, upgrading each replica might require different handling due to the stateful nature of the app, each replica might be in a different status. As a result, we often need a human operator to manage stateful applications. Kubernetes Operator is supposed to assist with this.
 
-This will also help with automating a standard process on multiple Kubernetes clusters
+This will also help with automating a standard process on multiple Kubernetes clusters.
 
 # What is Ingress Default Backend?
-It specifies what to do with an incoming request to the Kubernetes cluster that isn't mapped to any backend i.e what to do when no rules being defined for the incoming HTTP request If the default backend service is not defined, it's recommended to define it so that users still see some kind of message instead of an unclear error
+It specifies what to do with an incoming request to the Kubernetes cluster that isn't mapped to any backend i.e what to do when no rules being defined for the incoming HTTP request If the default backend service is not defined, it's recommended to define it so that users still see some kind of message instead of an unclear error.
 
 # What is Kubernetes Load Balancing?
 Load Balancing is one of the most common and standard ways of exposing the services. There are two types of load balancing in K8s and they are:
 
 **Internal load balancer –** This type of balancer automatically balances loads and allocates the pods with the required incoming load.
-
 **External Load Balancer –** This type of balancer directs the traffic from the external loads to backend pods
 
 # How to troubleshoot if the POD is not getting scheduled?
-In K8’s scheduler is responsible to spawn pods into nodes. There are many factors that can lead to unstartable POD. 
+In K8’s scheduler is responsible to spawn pods into nodes. There are many factors that can lead to unstart able POD. 
 The most common one is running out of resources, use the commands like `kubectl describe <POD> -n <Namespace>` to see the reason why POD is not started. 
 Also, keep an eye on `kubectl` to get events to see all events coming from the cluster.
 
@@ -233,7 +234,7 @@ Replicaset uses set-based selectors while the replication controller use equity-
 # What is heapster ?
 A Heapster is a cluster wide aggregator of performance monitoring data collected by the Kubelet. This aggregator is natively supported and runs like any other pod within a Kubernetes cluster, which allows it to discover and query usage data from all nodes within the cluster.
 
-# what is namespace
+# What is namespace?
 
 # Default namespaces in k8s ?
 - kube-system
@@ -242,18 +243,17 @@ A Heapster is a cluster wide aggregator of performance monitoring data collected
 # How can you get a static IP for a Kubernetes load balancer? 
 A static IP for the Kubernetes load balancer can be achieved by changing DNS records since the Kubernetes Master can assign a new static IP address.
 
-
 # Prometheus and Grafana
 ## What is promQL?
 this is the query language used to query the prometheus.
 used to create own queries and dash boards.
 
-# what is taint and tolerance ?
+# What is taint and tolerance ?
 **_Taints_** are applied to nodes, and allow a node to repel a set of pods.
 
 **_Tolerations_** are applied to pods, and allow (but do not require) the pods to schedule onto nodes with matching taints.
 
-Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes.One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints.
+Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints.
 
 ```yml
 apiVersion: v1
@@ -275,13 +275,10 @@ spec:
 
 A toleration "matches" a taint if the keys are the same and the effects are the same, and:
 -   the `operator` is `Exists` (in which case no `value` should be specified), or
--   the `operator` is `Equal` and the `value`s are equal.
+-   the `operator` is `Equal` and the `value` s are equal.
 
-**Note:**
-
-There are two special cases:
+**Note:** There are two special cases:
 An empty `key` with operator `Exists` matches all keys, values and effects which means this will tolerate everything.
-
 An empty `effect` matches all effects with key `key1`.
 
 # Node affinity and Pod affinity
@@ -296,15 +293,15 @@ Describe a deployment and check the events
 blue-green
 canary
 
-# what is stateful set ?
-# what is ingress ?
+# What is stateful set ?
+# What is ingress ?
 
-# headless service ?
+# Headless service ?
 
 # Configmap vs Secret
 secrets are encoded but not encrypted.
 
-# how do you make sure data base start first and then application ?
+# How do you make sure data base start first and then application ?
 we can define the logic for app pod/container to wait for the DB to come up and successful connection through readyness probe.
 
 # liveness probe and ready ness probe
@@ -316,15 +313,15 @@ may be like SSD/HDD ?
 
 # updating a password in secret will affect in POD/Deployment ?
 # How to dynamically update the password in secret ?
-# how to roll back deployment ?
+# How to roll back deployment ?
 https://www.youtube.com/watch?v=kFv6c00iEjY
 
-# whats the reason for pod eviction ?
+# Whats the reason for pod eviction ?
 Due to lack of resources on the node.
 `kubelet` can reclaim the starved resource by failing one or more pods.
 if evicted pod managed by a deployment, the deployment creates another pod to be scheduled by k8s.
 
-# how your monitoring your cluster
+# How your monitoring your cluster
 using prometheus and grafana
 > for application monitoring you need prometheus exporters
 > for example prometheus exporter for kafka, prometheus exporter for linux
@@ -357,6 +354,7 @@ K8s cost
            - kubecost
            - CloudHealth
            - Kubernetes resource report
+
 ## Tell me about a challenge you faced in k8s ?
 Challenge
     - K8s version upgrade 
