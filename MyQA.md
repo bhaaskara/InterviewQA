@@ -1,13 +1,58 @@
 ```
+AWS
 which secret management u used
     how to use aws secret management
     how to use aws secrets in jenkins and k8s
 aws lambda (server less)
+        AWS AUST SCALING POLICIES
+        s3 BUCKET POLICIES
+        ROUTE 53 ROUTING POLICIES
+        ec2 ROLES
 
-k8s capacity planning
+aws IAM organizations
 
-aws organizations
 k8s cluster auto scaler
+    how it scales , is it looks at limits or requests?
+    k8s capacity planning
+    how to select quorum
+    how to update the k8s cluster
+    how to take backup of k8s cluster/etcd
+    how to take backup of all the deployments
+
+Helm
+    helm2 vs helm3
+    how to recover a deployment if I lost the values file
+
+service
+    how it selects the backend pods
+
+limits and requests
+how ingress controller works
+
+Jenkins
+    custom tools
+    how to increase # of executors and what parameters we consider while increasing
+    how to prioritose a job
+Linux
+    how to take a coredump
+    how see system usage
+    how to rmove older files and error of arg list too long
+Shell scripting
+    error handling
+    how to run a script in debug mode
+    whats the use of -e option
+Terraform
+    How to see the preview - resource dependency hieranchy  
+    
+```
+
+# QA with Dyan
+```
+how many subscriptions are there?
+    whats the subscription type?
+    enterprise or pay-as-you-go
+how to open a support ticket?
+    whats the details they might ask, like logs or any files from us or from our account?
 
 ```
 # General
@@ -20,7 +65,10 @@ nexus
 
 # Shell scripting
 ```
+whats the recent automation you did?
 
+sed
+awk
 ```
 ## How to run a script in debug mode
 `bash -x helloworld.sh`
@@ -50,6 +98,11 @@ for (( i=0; i<= 100; i++))
 `sed '1,5d' dummy.txt` # Delete range of lines
 `sed '1d;2d;3d;$d' dummy.txt` # Delete multiple lines
 
+# Git
+```
+webhooks
+```
+
 # Jenkins
 ```
 - jenkins architecture
@@ -58,6 +111,7 @@ for (( i=0; i<= 100; i++))
 - 
 - where the jenkins logs reside on linux and windows
 https://www.jenkins.io/doc/book/system-administration/viewing-logs/
+how to run parallel jobs
 ```
 ## Jenkins version ur using
 2.289.3
@@ -95,6 +149,8 @@ config maps and secrets
 tainsts and tolerances
 node affinity and anti affinity
 how to make sure two pods from a deployment not to schedule on same pod
+    by using pod anti affinity
+how to apply labels to nodes
 monitoring: prometheus and grafana
 whats the other way to set limits and requests than mentioning in deployment specs
 what are the pod states
@@ -127,6 +183,7 @@ unknown
 waiting
 running
 terminated
+
 # AWS
 - what are different types of IAM policies
 - types of paths in Route 53
