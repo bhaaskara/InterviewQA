@@ -18,6 +18,7 @@ k8s cluster auto scaler
     how to update the k8s cluster
     how to take backup of k8s cluster/etcd
     how to take backup of all the deployments
+    how to find the api version to use?
 
 Helm
     helm2 vs helm3
@@ -36,14 +37,18 @@ Jenkins
 Linux
     how to take a coredump
     how see system usage
-    how to rmove older files and error of arg list too long
+    how to remove older files and error of arg list too long
 Shell scripting
     error handling
     how to run a script in debug mode
     whats the use of -e option
 Terraform
     How to see the preview - resource dependency hieranchy  
-    
+    null_resource
+    lambda functions through tf
+GIT
+    how to clone a private repo
+    how to create a pull request
 ```
 
 # QA with Dyan
@@ -54,6 +59,14 @@ how many subscriptions are there?
 how to open a support ticket?
     whats the details they might ask, like logs or any files from us or from our account?
 
+how you are monitoring your AKS cluster ?
+are you using Azure container registry ?
+
+GIt
+    how to create a  branch, are you creating a branch for every change you do ?
+    and are you creating a pull request ?
+    
+    how the code review and approvals happens ?
 ```
 # General
 - Whats your day to day activities
@@ -164,6 +177,8 @@ how do you use the cofnig maps
     as env vriables
     as mounting on to volumes
 how do you scan ur images in k8s
+how to backup and restore k8s, (i.e etcd)
+coreDNS and default network in K8s
 ```
 
 ## K8s version your using?
