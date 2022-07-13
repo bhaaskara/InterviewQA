@@ -30,6 +30,9 @@ service
 limits and requests
 how ingress controller works
 
+    Stoarge
+        how to expand a volume
+
 Jenkins
     custom tools
     how to increase # of executors and what parameters we consider while increasing
@@ -68,6 +71,7 @@ GIt
     
     how the code review and approvals happens ?
 ```
+
 # General
 - Whats your day to day activities
 - Whats the recent issue you faced
@@ -199,6 +203,9 @@ waiting
 running
 terminated
 
+## Ingress
+### where do you mention the ingress controller in yaml file?
+Using annotation.
 # AWS
 - what are different types of IAM policies
 - types of paths in Route 53
