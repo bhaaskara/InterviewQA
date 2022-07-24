@@ -12,6 +12,11 @@ VPC
 serverless computing options?
 ```
 
+https://www.edureka.co/blog/interview-questions/azure-interview-questions/
+https://intellipaat.com/blog/interview-question/microsoft-azure-interview-questions/
+https://www.simplilearn.com/tutorials/azure-tutorial/azure-interview-questions
+https://www.guru99.com/azure-interview-questions-answers.html
+https://www.techgeeknext.com/azure/azure-active-directory-interview-questions
 # Infra
 ## Region pairs
 Each Azure region is always paired with another region within the same geography to reduce disruption in service due to disaster events.

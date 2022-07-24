@@ -45,6 +45,8 @@ Shell scripting
     error handling
     how to run a script in debug mode
     whats the use of -e option
+    how to remove files older than a date
+    df -kh vs du
 Terraform
     How to see the preview - resource dependency hieranchy  
     null_resource
@@ -54,22 +56,52 @@ GIT
     how to create a pull request
 ```
 
+```
+Azure devops
+    how to create dependent jobs in AZ pipelines
+        may be conditions is the option
+    how to integrate artifacts with pipelines
+    email notifications
+    reports
+Azure
+    app gateway vs traffic manager vs standard load balancer
+    how to monitor the network traffic in Azure
+    how to recover the password for Azure vm (windows and linux)
+AKS
+    how to implement blue green deployment with AKS
+    https://azure.microsoft.com/en-in/solutions/kubernetes-on-azure/deployment-strategy/
+    node pools
+        do we assign node pools to clusters
+        how to mention the nodepool in deployment
+    monitoring
+        https://www.containiq.com/post/aks-monitoring
+        https://docs.microsoft.com/en-us/azure/aks/monitor-aks
+Git
+    how to push to remote branch instead of master
+```
 # QA with Dyan
 ```
+Cloud
 how many subscriptions are there?
     whats the subscription type?
     enterprise or pay-as-you-go
 how to open a support ticket?
     whats the details they might ask, like logs or any files from us or from our account?
 
+AKS
 how you are monitoring your AKS cluster ?
 are you using Azure container registry ?
+How you are doing ur unit testing when you write new yaml files for CI/CD or AKS?
 
 GIt
     how to create a  branch, are you creating a branch for every change you do ?
     and are you creating a pull request ?
     
     how the code review and approvals happens ?
+    are you using pull requests to merge the code
+CI/CD
+are you using any build tools?
+
 ```
 
 # General
@@ -217,7 +249,14 @@ Using annotation.
 - how to configure VPN
 - how to get the new access key for EC2 instance
 - SG vs NACL
-- 
+
+# Azure
+## How to prevent creating large VMs?
+using azure policies
+## What is azure policy?
+Through which you can maintain the organizational standards and compliance.
+## Storage
+can blobs/containers be mounted on to VM ?
 # Linux
 - List of open ports
 - List of softwares installed
