@@ -29,8 +29,7 @@ service
 
 limits and requests
 how ingress controller works
-
-    Stoarge
+    Storage
         how to expand a volume
 
 Jenkins
@@ -51,6 +50,11 @@ Terraform
     How to see the preview - resource dependency hieranchy  
     null_resource
     lambda functions through tf
+    terraform debug 
+        not just setting the TF_LOG variable 
+    terraform 0.13upgrade
+    work spaces in TF
+        how the main.tf and vars.tf are maintained
 GIT
     how to clone a private repo
     how to create a pull request
@@ -59,14 +63,33 @@ GIT
 ```
 Azure devops
     how to create dependent jobs in AZ pipelines
+        ude depends on
         may be conditions is the option
     how to integrate artifacts with pipelines
     email notifications
     reports
+    Sonarqube for code coverage
+    how to configure ISS role bindings
+    how to deploy to different regions
+        by using parrallel stages
+    .net and nuget projects/deploymenst
+    pass service
+        webapp service
+    classic and yaml pipelines
+    variables and variable groups
+    
 Azure
+    IAM
+        service principles and managed identity
     app gateway vs traffic manager vs standard load balancer
     how to monitor the network traffic in Azure
     how to recover the password for Azure vm (windows and linux)
+    system-assigned managed identity
+    traffic manager
+    azure functions
+    app gateway
+    Azure front door
+    
 AKS
     how to implement blue green deployment with AKS
     https://azure.microsoft.com/en-in/solutions/kubernetes-on-azure/deployment-strategy/
@@ -76,8 +99,36 @@ AKS
     monitoring
         https://www.containiq.com/post/aks-monitoring
         https://docs.microsoft.com/en-us/azure/aks/monitor-aks
+    AKS cluster upgrade
+        https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster?tabs=azure-cli
+    AKS cluster backup
+    AKS maintanance activities
+    pod identity
+    how to secure k8s cluster
+    Azure CNI vs KubeCNI
+    
 Git
     how to push to remote branch instead of master
+    how to configure webhooks
+    repo/branch level roles for peer/manager approvals
+    how to handle parallel releases
+Terraform
+    how to resolve statefile conflicts
+    workspaces
+    terraform sentinel policies
+
+OTHERS
+    python
+        check nanna youtube video - zero to hero
+    Linux
+        check edurekas 5 hour video
+    shell scripting
+        check youtube video on shell scripting examples
+    Helm3
+        check his udemy course on helm3 from AKS guy
+    Git advanced use case - youtube video
+    AKS tutorial
+    https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app
 ```
 # QA with Dyan
 ```

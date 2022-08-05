@@ -24,4 +24,8 @@ Each Azure region is always paired with another region within the same geography
 # VMs
 ```
 can a VM be dynamically change its size?
+yes, but after changing it reboots
 ```
+
+# What are the PaaS services worked on?
+app/webapp service
