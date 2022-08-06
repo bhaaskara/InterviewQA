@@ -132,6 +132,9 @@ OTHERS
 ```
 # QA with Dyan
 ```
+who is ur client?
+whats the project name?
+
 Cloud
 how many subscriptions are there?
     whats the subscription type?
@@ -151,8 +154,9 @@ GIt
     how the code review and approvals happens ?
     are you using pull requests to merge the code
 CI/CD
-are you using any build tools?
-
+    are you using any build tools?
+Terraform
+    
 ```
 
 # General
