@@ -77,7 +77,7 @@ Azure devops
         webapp service
     classic and yaml pipelines
     variables and variable groups
-    
+    task groups
 Azure
     IAM
         service principles and managed identity
@@ -116,8 +116,12 @@ Terraform
     how to resolve statefile conflicts
     workspaces
     terraform sentinel policies
+    git flow
+    
 
 OTHERS
+    Resource diagrams
+    visio diagrams
     python
         check nanna youtube video - zero to hero
     Linux
