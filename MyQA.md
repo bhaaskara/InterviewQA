@@ -118,7 +118,11 @@ Terraform
     terraform sentinel policies
     git flow
     
-
+powershell
+    how to debug 
+    some examples
+        for loop
+    
 OTHERS
     Resource diagrams
     visio diagrams
