@@ -55,9 +55,6 @@ Terraform
     terraform 0.13upgrade
     work spaces in TF
         how the main.tf and vars.tf are maintained
-GIT
-    how to clone a private repo
-    how to create a pull request
 ```
 
 ```
@@ -108,10 +105,13 @@ AKS
     Azure CNI vs KubeCNI
     
 Git
-    how to push to remote branch instead of master
+    how to push a branch instead of main to remote branch instead of master
     how to configure webhooks
     repo/branch level roles for peer/manager approvals
     how to handle parallel releases
+        git flow
+        check the youtube video
+    
 Terraform
     how to resolve statefile conflicts
     workspaces
