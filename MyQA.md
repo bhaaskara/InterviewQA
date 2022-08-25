@@ -103,6 +103,11 @@ AKS
     pod identity
     how to secure k8s cluster
     Azure CNI vs KubeCNI
+    secrets
+	    how to use secrets from Azure key vault
+	deployments
+		variables
+		how to use env variables from pipeline in deployment
     
 Git
     how to push a branch instead of main to remote branch instead of master
