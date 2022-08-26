@@ -1,3 +1,23 @@
+1. How do you monitor the AKS cluster?
+2. Prometheus and Grafana?
+3. Ingress controller and resource?
+4. types of services?
+5. Stateful vs stateless applications?
+6. Daemon set and Cros jobs?
+
+
+
+11. Whats the branching strategy ur using?
+12. how do you merge the code to main branch?
+
+13. what are the services you worked on Azure ?
+14. what are the services your created using terraform?
+15. how to create AKS cluster with Terraform?
+
+```
+Interview Tips
+Always asks for feedback/suggestion at the end of the call.
+```
 ```
 AWS
 which secret management u used
@@ -75,6 +95,7 @@ Azure devops
     classic and yaml pipelines
     variables and variable groups
     task groups
+    whats the buuld tool for .net rpojects?
 Azure
     IAM
         service principles and managed identity
@@ -122,6 +143,8 @@ Terraform
     workspaces
     terraform sentinel policies
     git flow
+    what does terraform import do?
+    how to create AKS cluster with Terraform?
     
 powershell
     how to debug 
@@ -357,5 +380,49 @@ On the other hand, a **dangling** image just means that you've created the new
 
 # Terraform
 ```
-sample code for creation of s3 bucket
+sample code for creation of storage account
+how to create AKS cluster
+what is terraform plan
+how to import a service created manually
+how do you manage the remote state management
 ```
+
+# Azure DevOps
+6. Task groups?
+7. 
+8.
+9. 
+10. 
+12. Cron jobs in Azure devops?
+
+## How to build the azure pipeline, end - end?
+**Build Pipeline**
+Select the source code
+Select the type of the pipeline i.e .Net or Java
+Select the OS to for agent to build the pipeline
+Add tasks to Build the code
+Add task to publish the artifacts for Release pipeline
+Or Add task to build the docker image and push to ACR
+Configure the trigger for continuous build.
+
+**Release Pipeline**
+Add the artifacts from Build pipeline
+Configure the stages to deploy the code on to different environments , i.e Dev,QA,UAT or Prod
+Configure the approvals and Gates per requirement
+
+## Whats the build tool your using for .Net projects 
+VS Build
+
+## How to access ACR from pipeline?
+Using service connection
+
+## How to push the image to ACR?
+By adding a task in build pipeline to Build and push the image to ACR
+
+## How do you deploy to AKS?
+Configure a service connection for Pipeline to connect to AKS
+Publish the manifests files from Build pipeline
+Use the manifests from build pipeline artifacts
+Configure task to Deploy on to AKS
+
+## Task groups for builds and releases (classic)

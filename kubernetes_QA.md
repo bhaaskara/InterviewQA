@@ -1,3 +1,7 @@
+1. what is context?
+context used to map a user with name space.
+to access multiple clusters or multiple name spaces it will be useful.
+
 # Basics
 ## What is container orchestration
 Container orchestration is the automation of operational effort required to run containerized workloads and services. 
