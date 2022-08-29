@@ -290,7 +290,7 @@ tainsts and tolerances
 node affinity and anti affinity
 how to make sure two pods from a deployment not to schedule on same pod
     by using pod anti affinity
-how to apply labels to nodes
+
 monitoring: prometheus and grafana
 whats the other way to set limits and requests than mentioning in deployment specs
 what are the pod states
@@ -326,9 +326,40 @@ waiting
 running
 terminated
 
+## how to apply labels to nodes
+`kubectl label nodes <your-node-name> disktype=ssd`
+`kubectl get nodes --show-lables`
+
 ## Ingress
 ### where do you mention the ingress controller in yaml file?
 Using annotation.
+
+## example code
+Deployment
+```yml
+ApiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:
+  lables:
+    app: webapp1
+spec:
+  replicas:
+  selecotLables:
+    app: webapp1
+  template:
+    containers
+    - name:
+      image:
+      volumes:
+      env:
+       - name:
+         keyRefFrom:
+          
+```
+Service
+SC
+PVC
 # AWS
 - what are different types of IAM policies
 - types of paths in Route 53
@@ -383,7 +414,7 @@ On the other hand, a **dangling** image just means that you've created the new
 sample code for creation of storage account
 how to create AKS cluster
 what is terraform plan
-how to import a service created manually
+how to import a resource created manually
 how do you manage the remote state management
 ```
 
