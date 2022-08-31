@@ -1,3 +1,12 @@
+```Cognizant
+AKS
+   how to upgrade
+   Azure files and Disks
+   prometheus and grafana
+   how to secure cluster
+    how to scan the images
+```
+
 1. How do you monitor the AKS cluster?
 2. Prometheus and Grafana?
 3. Ingress controller and resource?
