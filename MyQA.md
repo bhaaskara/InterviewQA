@@ -1,10 +1,17 @@
 ```Cognizant
 AKS
-   how to upgrade
-   Azure files and Disks
+   kubernetes web hooks
    prometheus and grafana
    how to secure cluster
-    how to scan the images
+     by using RBAC
+     enable SSL on service end ooints
+   how to upgrade the cluster
+   ELK ?
+Docker
+	RUN command vs entry point
+Azure key vault
+    how to backup azure keyvalut
+     by replicating across regions
 ```
 
 1. How do you monitor the AKS cluster?
@@ -104,7 +111,7 @@ Azure devops
     classic and yaml pipelines
     variables and variable groups
     task groups
-    whats the buuld tool for .net rpojects?
+    whats the build tool for .net rpojects? VS Build
 Azure
     IAM
         service principles and managed identity
@@ -318,7 +325,7 @@ coreDNS and default network in K8s
 ```
 
 ## K8s version your using?
-1.19
+1.23
 
 ## Docker version?
 18.09
@@ -369,6 +376,14 @@ spec:
 Service
 SC
 PVC
+
+# AKS
+## How to upgrade AKS cluster?
+Check for the max surge setting
+Check for the quotas for new nodes creation
+Check for the Azure CNI IP pool for the available IPs
+Create/Check for the PDBs
+
 # AWS
 - what are different types of IAM policies
 - types of paths in Route 53
@@ -425,8 +440,37 @@ how to create AKS cluster
 what is terraform plan
 how to import a resource created manually
 how do you manage the remote state management
+
+Terraform
+------------------
+1.	What are the terraform modules you worked on.?
+2.	What is the terraform providers?
+3.	What is tfstatefile? and where did you store it?
+4.	What is terraform workspace?
+
+6.	What is tfvar file?
+7.	Complete process to deploy a terraform code?	(Start with Azure providers, resources, variables, explan about init, validate, plan and commit)
+8.  Terraform building Blocks? (Providers, Resources and Outputs)
+9.  Azure Providers (Azurerm, aws, google).
+10. terraform functions (toLower, count.index, depends on, locals).
+11. Terraform provisioners?
+12. Difference between variable and variable.auto.tfvarf
+13. How you will change the terraform version. 
+14. What is terraform import?
+
+Scenario:
+13. We have already existing environment and now i want to create a new VM and should be create a new vnet and subnet for this VM and after 
+    creating the vNet/sNet only VM should create. what you will do?
+14.	If you want to call the existing resources to create any VM which function will use.
+		
+15. I have a additional data disk in my VM and wanted to destroy that data disk to using the Terraform code, it should not disturb any of the existing 		    configuration.		
+
+16. Need to create a three VMs with different name like ending letter will be changed, how you will write a code?	
+
 ```
 
+## What version of terraform you are using? 
+v1.1.9 (n-1)
 # Azure DevOps
 6. Task groups?
 7. 
