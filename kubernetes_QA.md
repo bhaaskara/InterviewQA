@@ -27,7 +27,7 @@ https://github.com/bhaaskara/Kubernetes/blob/main/K8s_concepts.md#k8s-architectu
 
 ## What are k8s cluster components
 K8s cluster will have two main components
-1. control plane (Master node)
+**1. control plane (Master node)**
    - **Kube-API server**: Users, the different parts of your cluster, and external components all communicate with one another through the API server.
       It validates and configures the data for API object such as PODs and services etc.
    - **ETCD**: cluster’s database
@@ -36,7 +36,7 @@ K8s cluster will have two main components
      Controller manager is a daemon that embeds controllers.
      Different controllers are compiled into a single binary like node controller, replication controller, and endpoint controller.
    - **Kube-cloud-control-manager:** kube-cloud-manager manages controllers that interact with underlying cloud providers.
-2. worker Node 
+**2. worker Node** 
    - **kubelet:** An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod. 
    - **kube-proxy:** kube-proxy is a network proxy that runs on each node in your cluster
 
@@ -54,16 +54,18 @@ Context binds users with the cluster and name space.
 By setting the context we can define cluster, namespace and user to connect.
 By default, the `kubectl` command-line tool uses parameters from the _current context_ to communicate with the cluster.
 
-# How to schedule app pods on master node ?
 
 # Pods
 ## Which k8s component creates the POD
 kubelet
 
+## How to schedule app pods on master node ?
+by applying tolerance
+
 ## Init containers
 specialized containers that run before app containers in a [Pod](https://kubernetes.io/docs/concepts/workloads/pods/). Init containers can contain utilities or setup scripts not present in an app image.
 
-## Live ness probes and ready ness probes
+## Live ness probes, Ready ness probes and Startup Probe
 
 ## Pending state
 - when there are not enough resources
@@ -79,10 +81,10 @@ specialized containers that run before app containers in a [Pod](https://kuberne
 mentioning or using node selector label in POD.
 using POD affinity
 
-## how to check what are the activities performed by the container while creating the pod?
+## How to check what are the activities performed by the container while creating the pod?
 by checking the logs
 
-## how to get IP of a POD?
+## How to get IP of a POD?
 `kubectl get pods -o wide`
 
 ## Job should be terminated after 40 secs

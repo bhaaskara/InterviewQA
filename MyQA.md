@@ -4,7 +4,7 @@ AKS
    prometheus and grafana
    how to secure cluster
      by using RBAC
-     enable SSL on service end ooints
+     enable SSL on service end points
    how to upgrade the cluster
    ELK ?
 Docker
@@ -123,6 +123,9 @@ Azure
     azure functions
     app gateway
     Azure front door
+    Azure key vault
+      How to backup
+      How to replicate to different region
     
 AKS
     how to implement blue green deployment with AKS
@@ -145,6 +148,7 @@ AKS
 	deployments
 		variables
 		how to use env variables from pipeline in deployment
+	Service mesh
     
 Git
     how to push a branch instead of main to remote branch instead of master
@@ -304,7 +308,7 @@ restart Jenkins with sudo service jenkins restart
 config maps and secrets
 tainsts and tolerances
 node affinity and anti affinity
-how to make sure two pods from a deployment not to schedule on same pod
+how to make sure two pods from a deployment not to schedule on same node?
     by using pod anti affinity
 
 monitoring: prometheus and grafana
@@ -330,27 +334,49 @@ coreDNS and default network in K8s
 ## Docker version?
 18.09
 
-## What are the POD phases/states ?
+## Pods
+### What happens when a new pod is created?
+- Pod creation request can be submitted to k8s cluster through kubectl command or Pod definition yaml file
+- kubectl communicates with kube api server for new pod creation
+- Kube api server communicates with the kube scheduler to identify the suitable node for new pod
+- Kube api server reaches the kubelet on the identified node
+- kubelet creates the pod and updates the kubeapi server.
+- kube api server saves the new pod status and its data in etcd data base.
+
+### What are the POD phases/states ?
 pending - it includes 
 running
 succeeded
 failed
 unknown
 
-## Container states
+### Container states
 waiting
 running
 terminated
 
-## how to apply labels to nodes
+## Nodes
+## How to apply labels to nodes?
 `kubectl label nodes <your-node-name> disktype=ssd`
 `kubectl get nodes --show-lables`
 
 ## Ingress
-### where do you mention the ingress controller in yaml file?
+### Where do you mention the ingress controller in yaml file?
 Using annotation.
 
-## example code
+### How the app is accessed from internet through Ingress?
+- app web address is entered in web browser
+- It reaches load balancer IP through DNS server
+- the request is processed by Ingress controller to direct it to right backend service
+- service directs the requests to backend Pod
+
+### Ingress controller vs Ingress resource?
+
+## RBAC
+## Role and Role binding?
+## Cluster role and cluster role binding?
+
+### example code
 Deployment
 ```yml
 ApiVersion: apps/v1
@@ -383,6 +409,8 @@ Check for the max surge setting
 Check for the quotas for new nodes creation
 Check for the Azure CNI IP pool for the available IPs
 Create/Check for the PDBs
+
+## Create AKS cluster using TF?
 
 # AWS
 - what are different types of IAM policies
