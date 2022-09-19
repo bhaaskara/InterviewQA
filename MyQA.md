@@ -12,6 +12,12 @@ Docker
 Azure key vault
     how to backup azure keyvalut
      by replicating across regions
+L3
+---
+whats the DR plan
+how do you design the production grade cluster
+	what are the question you ask different teams while designing
+what are the issues faced while upgrading the cluster
 ```
 
 1. How do you monitor the AKS cluster?
@@ -30,6 +36,25 @@ Azure key vault
 14. what are the services your created using terraform?
 15. how to create AKS cluster with Terraform?
 
+```
+In general format
+L1
+what is CI/CD
+what is k8s architecture
+
+L2
+how you are managing the secrets
+
+L3
+K8s
+	whats the DR plan
+	how do you design the production grade cluster
+		what are the question you ask different teams while designing
+	what are the issues faced while upgrading the cluster
+AWS
+	what are the vpc endpoints
+	
+```
 ```
 Interview Tips
 Always asks for feedback/suggestion at the end of the call.
@@ -214,6 +239,9 @@ CI/CD
 Terraform
     
 ```
+
+# Atos
+_Atos_ is a French IT service and consulting company, It specialises in cloud and [cybersecurity](https://en.wikipedia.org/wiki/Cybersecurity "Cybersecurity") services.
 
 # General
 - Whats your day to day activities
