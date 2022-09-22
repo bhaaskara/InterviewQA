@@ -1,3 +1,15 @@
+```virtusa
+How to make your webapp private?
+how to call modules in the terraform files
+lot on yaml based azure pipeline
+	how to add trigger in yaml pipeline
+	how to add pre/post approvals in yaml pipeline
+	what are the tasks for sonar qube in yaml pipeline
+how pipeline connects to azure artifacts
+unble to access the azure key vault secrets, what could be the reason
+azure hosted agent showing offline
+
+```
 ```Cognizant
 AKS
    kubernetes web hooks
@@ -491,25 +503,19 @@ On the other hand, a **dangling** image just means that you've created the new
 
 # Terraform
 ```
-sample code for creation of storage account
-how to create AKS cluster
-what is terraform plan
-how to import a resource created manually
-how do you manage the remote state management
-
 Terraform
 ------------------
-1.	What are the terraform modules you worked on.?
-2.	What is the terraform providers?
-3.	What is tfstatefile? and where did you store it?
-4.	What is terraform workspace?
+1.	
+2.	
+3.	
+4.	
 
-6.	What is tfvar file?
-7.	Complete process to deploy a terraform code?	(Start with Azure providers, resources, variables, explan about init, validate, plan and commit)
-8.  Terraform building Blocks? (Providers, Resources and Outputs)
-9.  Azure Providers (Azurerm, aws, google).
-10. terraform functions (toLower, count.index, depends on, locals).
-11. Terraform provisioners?
+6.	
+7.	
+8.  
+9.  
+10. 
+11. 
 12. Difference between variable and variable.auto.tfvarf
 13. How you will change the terraform version. 
 14. What is terraform import?
@@ -527,6 +533,105 @@ Scenario:
 
 ## What version of terraform you are using? 
 v1.1.9 (n-1)
+
+## What is terraform plan?
+`terraform plan` is like a dry run, which compares the current infrastrutucture status in `terraform.tfstae` file with the desired configuration and shows the changes going to be applied by the `terraform apply`.
+
+## What is the terraform providers?
+Providers are the plugins through which terraform interacts with the underlying infra provider.
+ex: Azure Providers (Azurerm), aws, and google.
+## Complete process to deploy a terraform code?	
+Start with Azure providers, resources, variables, explan about init, validate, plan and apply
+
+## Terraform building Blocks?
+Providers, Resources and Outputs
+
+## How to import a resource created manually?
+By using the `terraform import` you can import/add a resource to the `terraform.tfstate` file which was created in the cloud manually.
+But this doesn't add the code/resource configuratio to the `tf` file and need to be added manually, otherwise terraform apply will delete the resource in next run.
+
+## What is tfstatefile? and where did you store it?
+tfstate file contains the current infrastrure state and we use remote backend to store it.
+
+## How do you manage the remote state management?
+By using the remote backend in the azure storage account.
+```sh
+# Configure Terraform remote State Storage
+    backend "azurerm" {
+    resource_group_name   = "terraform-storage-rg"
+    storage_account_name  = "terraformstatexlrwdrzs"
+    container_name        = "prodtfstate"
+    key                   = "terraform.tfstate"
+  }
+```
+
+## What are the terraform modules you worked on.?
+Vnet 
+VM
+NSG
+Storage
+
+## What is tfvar file?
+Variables are defined and assigned with default values using tfvars file.
+
+## terraform functions?
+toLower, count.index, depends on, locals, slice
+
+## What is terraform workspace?
+
+## How to create AKS cluster using terraform?
+1. Define the pre requisites
+	1. Size of the system node pool
+	2. Size of the user node pools
+	3. Type of the nodes in the system node pool, i.e DSV2
+	4. Mention the username/password for windows node pool
+	5. Create SSH keys for the linux node pools
+	6. Create log analytics work space for the cluster monitoring
+	7. Define the integrations with AD,ACR, key valut etc..
+2. Create the configuration files
+3. Run the files through build and release pipelines
+	1. use Terraform task to run the init,plan and apply
+
+## Sample code for creation of storage account?
+main.tf
+``` sh
+# Terraform version 0.13 or later
+# We strongly recommend using the required_providers block to set the
+# Azure Provider source and version being used
+terraform {
+  required_version = ">= 1.1.0"
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
+    }
+  }
+}
+
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+    features {}
+}
+```
+storage.tf
+``` sh
+resource "azurerm_resource_group" "grp" {
+  name     = var.resource_group_name
+  location = "North Europe"
+}
+ 
+resource "azurerm_storage_account" "store" {
+  name                     = var.storage_account_name
+  resource_group_name      = azurerm_resource_group.grp.name
+  location                 = azurerm_resource_group.grp.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
+```
+
+## Terraform provisioners?
+
 # Azure DevOps
 6. Task groups?
 7. 
