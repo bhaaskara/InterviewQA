@@ -32,6 +32,25 @@ how do you design the production grade cluster
 what are the issues faced while upgrading the cluster
 ```
 
+```LTI
+1. Azure networking
+	1. express route
+	2. vpn peering
+	3. site site to vpn
+2. Azure devops
+	1. full life cycle
+3. How to secure your environment
+	1. azure
+	2. AKS
+4. what is the recent solution/project you delivered
+
+```
+```BT
+1. Python/Shell scripting 
+2. Terraform
+	1. example code for resource creation
+```
+
 1. How do you monitor the AKS cluster?
 2. Prometheus and Grafana?
 3. Ingress controller and resource?
