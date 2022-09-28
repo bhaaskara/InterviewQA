@@ -242,38 +242,6 @@ OTHERS
     AKS tutorial
     https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app
 ```
-# QA with Dyan
-```
-who is ur client?
-whats the project name?
-
-Cloud
-how many subscriptions are there?
-    whats the subscription type?
-    enterprise or pay-as-you-go
-how to open a support ticket?
-    whats the details they might ask, like logs or any files from us or from our account?
-
-AKS
-how you are monitoring your AKS cluster ?
-are you using Azure container registry ?
-How you are doing ur unit testing when you write new yaml files for CI/CD or AKS?
-
-GIt
-    how to create a  branch, are you creating a branch for every change you do ?
-    and are you creating a pull request ?
-    
-    how the code review and approvals happens ?
-    are you using pull requests to merge the code
-CI/CD
-    are you using any build tools?
-Terraform
-    
-```
-
-# Atos
-_Atos_ is a French IT service and consulting company, It specialises in cloud and [cybersecurity](https://en.wikipedia.org/wiki/Cybersecurity "Cybersecurity") services.
-
 # General
 - Whats your day to day activities
 - Whats the recent issue you faced
@@ -490,6 +458,13 @@ using azure policies
 Through which you can maintain the organizational standards and compliance.
 ## Storage
 can blobs/containers be mounted on to VM ?
+
+## Webapp
+**How to make a webapp private?**
+By creating private end points
+https://learn.microsoft.com/en-us/azure/private-link/tutorial-private-endpoint-webapp-portal
+
+
 # Linux
 - List of open ports
 - List of softwares installed
