@@ -57,7 +57,7 @@ what are the issues faced while upgrading the cluster
 4. types of services?
 5. Stateful vs stateless applications?
 6. Daemon set and Cros jobs?
-
+7. how to trouble shoot 502 error ?
 
 
 11. Whats the branching strategy ur using?
@@ -147,6 +147,7 @@ Terraform
     terraform 0.13upgrade
     work spaces in TF
         how the main.tf and vars.tf are maintained
+	implecit and explicit dependency
 ```
 
 ```
