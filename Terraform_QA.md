@@ -7,6 +7,11 @@
 # How to remove only few resources through terraform ?
 `terraform destroy -target aws_instance.web`
 
+## Does Terraform Apply / Plan automatically run Terraform init ?
+NO
+
+## What does Terraform apply do?
+
 # What is TF backend ?
 Each Terraform configuration can specify a backend, which defines two main things:
 -   Where operations are performed 
