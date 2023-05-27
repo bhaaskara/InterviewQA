@@ -1,5 +1,6 @@
 1. Data source
 2. output block
+3. ingone_changes in terrafrom plan
 # What is IAC (Infrastructure as code)
 
 ![[Pasted image 20220306000057.png]]
