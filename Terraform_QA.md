@@ -33,3 +33,12 @@ A tainted resource is a resource that is forced to be destroyed and recreated on
 
 # How will you upgrade plugins on Terraform?
 Run ‘terraform init’ with ‘-upgrade’ option. This command rechecks the releases.hashicorp.com to find new acceptable provider versions. It also downloads available provider versions. “.terraform/plugins/<OS>_<ARCH>” is the automatic downloads directory.
+
+## what are the different ways to pass the arguments?
+variables.tfvars
+variables.tf
+resource block
+environment variables
+cli arguments
+
+## how to upgrade plugins in terraform ? Ans : terraform init -upgrade
