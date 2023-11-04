@@ -371,3 +371,5 @@ using service mesh
 
 # How to find the API version to use?
 use `kubectl explain `to find out.
+
+# what is idempotent?
