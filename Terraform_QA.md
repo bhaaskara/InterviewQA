@@ -42,3 +42,5 @@ environment variables
 cli arguments
 
 ## how to upgrade plugins in terraform ? Ans : terraform init -upgrade
+
+# how to restore terraform state file.
