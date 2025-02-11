@@ -1,4 +1,4 @@
-![[Pasted image 20220306000029.png]]
+![test](./Pasted%20image%2020220306000029.png)
 
 # EC2
 ## Public IP vs Elastic IP?
